@@ -25,7 +25,7 @@ public class UserRegisterController {
         this.messageSource = messageSource;
     }
     @ModelAttribute("registerUserDTO")
-    public RegisterUserDTO setUpRegisterUserDTO() {
+    public RegisterUserDTO setRegisterUserDTO() {
         return new RegisterUserDTO();
     }
 
@@ -53,6 +53,6 @@ public class UserRegisterController {
                 return "redirect:/register";
             }
         }
-        return "index";
+        return "redirect:/login";
     }
 }
